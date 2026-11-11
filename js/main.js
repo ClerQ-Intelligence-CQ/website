@@ -10,15 +10,19 @@
   function resolveAssetUrl(relPath) {
     if (!relPath) return '';
     var clean = relPath.replace(/^\/+/, '');
+    var base = clean;
     try {
       var pathname = window.location.pathname || '/';
       if (/\/(about|research|contact|partners)(\/|$)/.test(pathname)) {
-        return '../' + clean;
+        base = '../' + clean;
+      } else {
+        base = '/' + clean;
       }
-      return clean;
     } catch (e) {
-      return '/' + clean;
+      base = '/' + clean;
     }
+    // Append asset cache buster so mobile browsers never display stale media
+    return base + (base.indexOf('?') === -1 ? '?v=20261111_10' : '&v=20261111_10');
   }
 
   // ============================================================
@@ -273,6 +277,11 @@
       var isActive = i === index;
       btn.classList.toggle('is-active', isActive);
       btn.setAttribute('aria-selected', String(isActive));
+      if (isActive && typeof btn.scrollIntoView === 'function') {
+        try {
+          btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        } catch (e) {}
+      }
     });
 
     // 2. Update Dots
@@ -490,18 +499,32 @@
   // Mobile navigation toggle
   var navToggle = document.getElementById('nav-toggle');
   var navLinks = document.getElementById('nav-links');
+  var navBackdrop = document.getElementById('nav-backdrop');
   if (navToggle && navLinks) {
+    function toggleMobileMenu(forceOpen) {
+      var willOpen = typeof forceOpen === 'boolean' ? forceOpen : !navLinks.classList.contains('nav__links--open');
+      navLinks.classList.toggle('nav__links--open', willOpen);
+      navToggle.classList.toggle('nav__toggle--open', willOpen);
+      navToggle.setAttribute('aria-expanded', String(willOpen));
+      if (navBackdrop) {
+        navBackdrop.classList.toggle('nav__backdrop--open', willOpen);
+      }
+      document.body.style.overflow = willOpen ? 'hidden' : '';
+    }
+
     navToggle.addEventListener('click', function () {
-      var isOpen = navLinks.classList.toggle('nav__links--open');
-      navToggle.classList.toggle('nav__toggle--open', isOpen);
-      navToggle.setAttribute('aria-expanded', String(isOpen));
+      toggleMobileMenu();
     });
 
-    navLinks.querySelectorAll('.nav__link').forEach(function (link) {
+    if (navBackdrop) {
+      navBackdrop.addEventListener('click', function () {
+        toggleMobileMenu(false);
+      });
+    }
+
+    navLinks.querySelectorAll('.nav__link, .nav__lang-toggle').forEach(function (link) {
       link.addEventListener('click', function () {
-        navLinks.classList.remove('nav__links--open');
-        navToggle.classList.remove('nav__toggle--open');
-        navToggle.setAttribute('aria-expanded', 'false');
+        toggleMobileMenu(false);
       });
     });
   }

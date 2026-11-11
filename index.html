@@ -50,7 +50,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/css/main.css?v=20261111_09">
+  <link rel="stylesheet" href="/css/main.css?v=20261111_10">
 </head>
 
 <body>
@@ -112,6 +112,7 @@
       <span class="nav__toggle-bar"></span>
     </button>
   </nav>
+  <div class="nav__backdrop" id="nav-backdrop" aria-hidden="true"></div>
 
   <!-- ====== HERO ====== -->
   <section class="hero" id="hero">
@@ -156,16 +157,15 @@
         <h2 data-en="ClerQ CDS: Health, done right." data-sw="ClerQ CDS: Afya, kwa usahihi.">ClerQ CDS: Health, done
           right.</h2>
         <p class="text-muted" style="margin-top: var(--space-xs);"
-          data-en="The complete keynote presentation: the frontline reality in Tanzania, the 1:3,000 clinician ratio, and why offline, guideline-deterministic decision support provides instant clarity at the bedside."
-          data-sw="Muhtasari kamili wa filamu kuu: uhalisia wa mstari wa mbele Tanzania, uwiano wa mhudumu 1 kwa watu 3,000, na kwanini msaada wa maamuzi nje ya mtandao unaleta uwazi wa papo hapo wodini.">
-          The complete keynote presentation: the frontline reality in Tanzania, the 1:3,000 clinician ratio, and why
-          offline, guideline-deterministic decision support provides instant clarity at the bedside.
+          data-en="Watch our keynote presentation: See how ClerQ was built alongside frontline clinicians in Tanzania to bring fast, dependable bedside clarity to every clinic — 100% offline."
+          data-sw="Tazama filamu yetu kuu: Jinsi ClerQ ilivyojengwa pamoja na madaktari wa mstari wa mbele Tanzania kuleta mwongozo wa haraka na wa kuaminika wodini — moja kwa moja na bila mtandao.">
+          Watch our keynote presentation: See how ClerQ was built alongside frontline clinicians in Tanzania to bring fast, dependable bedside clarity to every clinic — 100% offline.
         </p>
       </div>
 
       <div class="video-card">
-        <video controls playsinline preload="metadata" poster="/assets/video/clerq_keynote_poster.jpg">
-          <source src="/assets/video/clerq_keynote_full.mp4" type="video/mp4">
+        <video controls playsinline preload="metadata" poster="/assets/video/clerq_keynote_poster.jpg?v=20261111_10">
+          <source src="/assets/video/clerq_keynote_full.mp4?v=20261111_10" type="video/mp4">
           Your browser does not support high-definition video playback.
         </video>
         <div class="video-caption">
@@ -209,7 +209,7 @@
 
       <div
         style="margin: var(--space-md) auto; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; max-width: 740px;">
-        <img src="/assets/images/clinician-care.jpg" alt="Clinician in a health facility in Tanzania mid-consultation"
+        <img src="/assets/images/clinician-care.jpg?v=20261111_10" alt="Clinician in a health facility in Tanzania mid-consultation"
           style="width: 100%; height: auto; display: block;" loading="lazy">
       </div>
 
@@ -289,8 +289,7 @@
         </div>
 
         <!-- Lucy's capabilities -->
-        <div
-          style="margin-top: var(--space-lg); display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-md); text-align: center;">
+        <div class="lucy-caps-grid">
           <div style="text-align: center;">
             <h4 style="font-size: var(--fs-small); font-weight: var(--fw-semibold);" data-en="Offline-native"
               data-sw="Asili ya nje ya mtandao">Offline-native</h4>
@@ -447,10 +446,10 @@
           <div class="suite-device-frame">
             <div class="suite-device-screen">
               <div class="suite-device-island"></div>
-              <img id="suite-screen-img" src="assets/screens/new_lucy.png" alt="Lucy Clinical Copilot — Emergency Triage Category RED"
+              <img id="suite-screen-img" src="/assets/screens/new_lucy.png?v=20261111_10" alt="Lucy Clinical Copilot — Emergency Triage Category RED"
                 class="suite-screen-img">
               <video id="suite-screen-video" class="suite-screen-video" loop muted playsinline>
-                <source src="assets/screens/chat_FINAL_cut_f80_f259_out.mp4" type="video/mp4">
+                <source src="/assets/screens/chat_FINAL_cut_f80_f259_out.mp4?v=20261111_10" type="video/mp4">
               </video>
             </div>
           </div>
@@ -642,7 +641,7 @@
 
       <div class="voices-gallery">
         <div class="voice-card">
-          <img src="/assets/images/doctor-smile.jpg" alt="Clinician in consultation room in Tanzania"
+          <img src="/assets/images/doctor-smile.jpg?v=20261111_10" alt="Clinician in consultation room in Tanzania"
             class="voice-card__img" loading="lazy">
           <div class="voice-card__body">
             <span class="voice-card__role" data-en="Dispensary Consultation" data-sw="Ushauri wa Zahanati">Dispensary
@@ -657,7 +656,7 @@
         </div>
 
         <div class="voice-card">
-          <img src="/assets/images/nurse-smile.jpg" alt="Nursing staff in clinical facility hallway"
+          <img src="/assets/images/nurse-smile.jpg?v=20261111_10" alt="Nursing staff in clinical facility hallway"
             class="voice-card__img" loading="lazy">
           <div class="voice-card__body">
             <span class="voice-card__role" data-en="Inpatient Ward Care" data-sw="Huduma ya Wodini">Inpatient Ward
@@ -672,7 +671,7 @@
         </div>
 
         <div class="voice-card">
-          <img src="/assets/images/girl-smile.jpg" alt="Young patient at community healthcare clinic"
+          <img src="/assets/images/girl-smile.jpg?v=20261111_10" alt="Young patient at community healthcare clinic"
             class="voice-card__img" loading="lazy">
           <div class="voice-card__body">
             <span class="voice-card__role" data-en="Peripheral Health Centers"
@@ -709,8 +708,7 @@
         </p>
       </div>
 
-      <div
-        style="margin-top: var(--space-lg); display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-lg); text-align: center;">
+      <div class="purpose-grid">
         <div style="text-align: center;">
           <h3 style="font-size: var(--fs-body); font-weight: var(--fw-semibold);" data-en="Language-first"
             data-sw="Lugha-kwanza">Language-first</h3>
@@ -930,9 +928,9 @@
     </div>
   </footer>
 
-  <script src="/js/main.js?v=20261111_09"></script>
+  <script src="/js/main.js?v=20261111_10"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
-  <script src="/js/principles-scene.js?v=20261111_08" defer></script>
+  <script src="/js/principles-scene.js?v=20261111_10" defer></script>
 </body>
 
 </html>
