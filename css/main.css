@@ -1133,6 +1133,60 @@ p {
   margin-top: var(--space-md);
 }
 
+.research-dropdown {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.research-dropdown__summary {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+  font-weight: var(--fw-medium);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1px;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color var(--duration-fast) var(--ease-out),
+              opacity var(--duration-fast) var(--ease-out);
+}
+
+.research-dropdown__summary::-webkit-details-marker {
+  display: none;
+}
+
+.research-dropdown__summary:hover {
+  opacity: 1;
+  border-bottom-color: var(--ink);
+}
+
+.research-dropdown__chevron {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.research-dropdown[open] .research-dropdown__chevron {
+  transform: rotate(180deg);
+}
+
+.research-dropdown__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(10, 10, 10, 0.02);
+}
+
 /* --- Partner Block ------------------------------------------ */
 .partner-block {
   padding: var(--space-lg) 0;

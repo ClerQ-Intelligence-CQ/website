@@ -18,7 +18,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/css/main.css?v=20261111_08">
+  <link rel="stylesheet" href="/css/main.css?v=20261111_09">
 </head>
 <body>
 
@@ -131,19 +131,37 @@
         </div>
       </div>
 
+      <h3 style="margin-top: var(--space-lg);" data-en="Current release: v0.2" data-sw="Toleo la sasa: v0.2">Current release: v0.2</h3>
+      <p style="margin-top: var(--space-sm);" data-en="With v0.2, Sema moves beyond forward word lookup into deterministic back-pass synthesis and verification. Rather than relying on a language model to generate free-form Swahili prose, Sema v0.2 compiles structured grammatical intents (subject and object concords across noun classes C1–C18, tense-aspect-mood markers, negation, and vowel harmony) into surface Swahili verbs in roughly one microsecond. Every synthesized form passes through a forward self-consistency gate to prevent negation flips, while dictionary term shielding locks drug names and numeric dosages behind opaque tokens so clinical facts cannot be altered in transit." data-sw="Katika toleo la v0.2, Sema inapiga hatua zaidi ya utafutaji wa maneno na kuleta uundaji wa moja kwa moja wa kisarufi na uthibitishaji. Badala ya kutegemea mfumo wa lugha kubuni sentensi za Kiswahili, Sema v0.2 inakusanya nia za kisarufi zilizopangwa (viambishi vya nafsi na ngeli C1–C18, nyakati, ukanushaji, na uwiano wa irabu) na kuunda vitenzi sahihi vya Kiswahili ndani ya sekunde ndogo. Kila neno linakaguliwa na mfumo wa uthibitishaji wa ndani kuzuia makosa ya ukanushaji, huku ulinzi wa msamiati ukifunga majina ya dawa na vipimo ili taarifa za kitabibu zisibadilishwe.">
+        With v0.2, Sema moves beyond forward word lookup into deterministic back-pass synthesis and verification. Rather than relying on a language model to generate free-form Swahili prose, Sema v0.2 compiles structured grammatical intents (subject and object concords across noun classes C1–C18, tense-aspect-mood markers, negation, and vowel harmony) into surface Swahili verbs in roughly one microsecond. Every synthesized form passes through a forward self-consistency gate to prevent negation flips, while dictionary term shielding locks drug names and numeric dosages behind opaque tokens so clinical facts cannot be altered in transit.
+      </p>
+
       <div style="margin: var(--space-lg) auto 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; max-width: 720px; box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
         <img src="/assets/images/sema-manuscript.jpg" alt="Sema morphological linguistic notes and STG clinical guidelines" style="width: 100%; height: auto; display: block;" loading="lazy">
       </div>
 
       <div class="research-links" style="margin-top: var(--space-md);">
-        <a href="https://medium.com/" class="ext-link" target="_blank" rel="noopener noreferrer">
-          <span data-en="Read the full writeup: 'The Boring Solution'" data-sw="Soma maelezo kamili: 'The Boring Solution'">Read the full writeup: "The Boring Solution"</span>
+        <a href="https://nama-researchlab.github.io/Sema/" class="ext-link" target="_blank" rel="noopener noreferrer">
+          <span data-en="See Sema" data-sw="Tazama Sema">See Sema</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
         </a>
         <a href="https://github.com/Nama-ResearchLab/Sema" class="ext-link" target="_blank" rel="noopener noreferrer">
           <span data-en="Main repository on GitHub" data-sw="Hazina kuu kwenye GitHub">Main repository on GitHub</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
         </a>
+        <details class="research-dropdown">
+          <summary class="research-dropdown__summary">
+            <span data-en="Read more" data-sw="Soma zaidi">Read more</span>
+            <svg class="research-dropdown__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="research-dropdown__list">
+            <!-- Add future Sema publications and writeups here -->
+            <a href="https://medium.com/" class="ext-link" target="_blank" rel="noopener noreferrer">
+              <span data-en="Read the full writeup: 'The Boring Solution'" data-sw="Soma maelezo kamili: 'The Boring Solution'">Read the full writeup: "The Boring Solution"</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </details>
         <a href="mailto:research@clerqintelligence.com" class="ext-link">
           <span data-en="Questions about Sema? research@clerqintelligence.com" data-sw="Maswali kuhusu Sema? research@clerqintelligence.com">Questions about Sema? research@clerqintelligence.com</span>
         </a>
@@ -270,6 +288,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js?v=20261111_08"></script>
+  <script src="/js/main.js?v=20261111_09"></script>
 </body>
 </html>
