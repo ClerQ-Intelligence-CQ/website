@@ -1,0 +1,5 @@
+# Ignore unused large GIFs and draft promo video
+assets/screens/*.gif
+assets/video/clerq_promo_90s.mp4
+.DS_Store
+Thumbs.db

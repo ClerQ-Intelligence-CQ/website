@@ -44,68 +44,78 @@
   resize();
   window.addEventListener('resize', resize);
 
-  // Materials: thin monochrome wireframes
+  // Materials: luminous brand-aligned wireframes over dark clinical image
   var wireMaterial = new THREE.MeshBasicMaterial({
-    color: 0x0A0A0A,
+    color: 0xB79BEF,
     wireframe: true,
     transparent: true,
-    opacity: 0.08
+    opacity: 0.35
+  });
+
+  var wireMaterialCyan = new THREE.MeshBasicMaterial({
+    color: 0x38BDF8,
+    wireframe: true,
+    transparent: true,
+    opacity: 0.28
   });
 
   var wireMaterialLight = new THREE.MeshBasicMaterial({
-    color: 0x0A0A0A,
+    color: 0xE0D4FC,
     wireframe: true,
     transparent: true,
-    opacity: 0.05
+    opacity: 0.22
   });
 
-  // Geometry: sparse, quiet forms referencing circular letterforms
+  var heroGroup = new THREE.Group();
+  scene.add(heroGroup);
+
+  // Geometry: sparse, quiet forms referencing circular letterforms and decision networks
   var ring1 = new THREE.Mesh(
     new THREE.TorusGeometry(2.2, 0.02, 16, 80),
     wireMaterial
   );
   ring1.rotation.x = Math.PI * 0.35;
-  scene.add(ring1);
+  heroGroup.add(ring1);
 
   var ring2 = new THREE.Mesh(
     new THREE.TorusGeometry(1.6, 0.015, 16, 60),
-    wireMaterialLight
+    wireMaterialCyan
   );
   ring2.rotation.x = Math.PI * 0.6;
   ring2.rotation.z = Math.PI * 0.2;
-  scene.add(ring2);
+  heroGroup.add(ring2);
 
   var sphere1 = new THREE.Mesh(
-    new THREE.SphereGeometry(1.4, 20, 16),
+    new THREE.SphereGeometry(1.4, 24, 20),
     wireMaterialLight
   );
-  sphere1.position.set(1.5, 0.5, -2);
-  scene.add(sphere1);
+  sphere1.position.set(0.6, 0.2, -1);
+  heroGroup.add(sphere1);
 
   var torus1 = new THREE.Mesh(
-    new THREE.TorusKnotGeometry(0.8, 0.08, 80, 12, 2, 3),
+    new THREE.TorusKnotGeometry(0.8, 0.06, 80, 12, 2, 3),
     new THREE.MeshBasicMaterial({
-      color: 0x0A0A0A,
+      color: 0xA78BFA,
       wireframe: true,
       transparent: true,
-      opacity: 0.04
+      opacity: 0.25
     })
   );
-  torus1.position.set(-2, -0.5, -1);
-  scene.add(torus1);
+  torus1.position.set(-0.8, -0.4, 0.5);
+  heroGroup.add(torus1);
 
   var ring3 = new THREE.Mesh(
-    new THREE.TorusGeometry(3, 0.01, 8, 120),
+    new THREE.TorusGeometry(2.8, 0.01, 8, 120),
     new THREE.MeshBasicMaterial({
-      color: 0x0A0A0A,
+      color: 0x38BDF8,
       wireframe: true,
       transparent: true,
-      opacity: 0.03
+      opacity: 0.18
     })
   );
   ring3.rotation.x = Math.PI * 0.5;
   ring3.rotation.y = Math.PI * 0.15;
-  scene.add(ring3);
+  heroGroup.add(ring3);
 
   // Animation
   if (reducedMotion) {

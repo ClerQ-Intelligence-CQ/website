@@ -18,9 +18,27 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/main.css?v=20261111_08">
 </head>
 <body>
+
+  <!-- ====== TDHW 2026 INSTITUTIONAL BAR ====== -->
+  <div class="tdhw-institutional-bar" role="region" aria-label="Tanzania Digital Health Week Announcement">
+    <div class="tdhw-institutional-bar__inner">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
+        <span class="tdhw-institutional-bar__tag">TDHW 2026</span>
+        <span data-en="Live at Tanzania Digital Health Week 2026 · Demonstrating Offline Decision Support for Frontline Clinicians" data-sw="Mubashara: Wiki ya Afya ya Kidijitali Tanzania 2026 · Tukionyesha Msaada wa Maamuzi ya Kitabibu Nje ya Mtandao">
+          Live at Tanzania Digital Health Week 2026 · Demonstrating Offline Decision Support for Frontline Clinicians
+        </span>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+        <a href="/#keynote-film" class="tdhw-institutional-bar__link">
+          <span data-en="Watch Keynote Film" data-sw="Tazama Filamu Kuu">Watch Keynote Film</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- ====== NAVIGATION ====== -->
   <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
@@ -61,6 +79,11 @@
       <p style="margin-top: var(--space-md);" data-en="We're a small team working on edge AI, low-resource language processing, and clinical decision support in a low-connectivity setting. The problems we're trying to solve don't exist in isolation, and we don't pretend to have all the answers. If you're working on something adjacent (in research, in a clinic, or in the field), we'd like to talk." data-sw="Sisi ni timu ndogo inayofanya kazi katika AI ya ukingoni, uchakataji wa lugha zenye rasilimali chache, na msaada wa maamuzi ya kitabibu katika mazingira ya muunganisho mdogo. Matatizo tunayojaribu kuyatatua hayapo peke yake, na hatujifanyi kuwa na majibu yote. Ikiwa unafanya kazi katika kitu kilicho karibu (katika utafiti, kliniki, au uwanjani), tungependa kuzungumza.">
         We're a small team working on edge AI, low-resource language processing, and clinical decision support in a low-connectivity setting. The problems we're trying to solve don't exist in isolation, and we don't pretend to have all the answers. If you're working on something adjacent (in research, in a clinic, or in the field), we'd like to talk.
       </p>
+
+      <div style="margin: var(--space-lg) auto 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; max-width: 740px; box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
+        <img src="/assets/images/rafiki-mesh.jpg" alt="Clinical officer and nurse reviewing offline clinical guidance on an Android phone on the dispensary veranda in Mtoni, Tanzania" style="width: 100%; height: auto; display: block;" loading="lazy">
+      </div>
+      <p class="text-small text-muted" style="margin-top: 0.5rem; text-align: center;">Zahanati ya Kijiji cha Mtoni: Clinical officer and nurse collaborating at point of care.</p>
     </div>
   </section>
 
@@ -73,31 +96,30 @@
   <section class="section" id="areas">
     <div class="container">
       <h2 data-en="Areas where we're looking for collaborators" data-sw="Maeneo ambayo tunatafuta washirikiano">Areas where we're looking for collaborators</h2>
-      <div style="margin-top: var(--space-lg); display: flex; flex-direction: column; gap: var(--space-lg);">
+      <div style="margin-top: var(--space-lg); display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-md);">
 
-        <div style="border-bottom: 1px solid var(--line); padding-bottom: var(--space-lg);">
-          <h3 style="font-size: var(--fs-body); font-weight: var(--fw-semibold);" data-en="Edge AI and on-device inference" data-sw="AI ya ukingoni na uelekezaji wa kwenye kifaa">Edge AI and on-device inference</h3>
-          <p class="text-muted" style="margin-top: var(--space-xs);" data-en="Running clinical AI on low-cost Android devices with no cloud dependency. We're interested in model compression, quantization strategies for medical NLP, and runtime optimization for resource-constrained hardware. If you're working on making AI models smaller and faster without sacrificing reliability, we should talk." data-sw="Kuendesha AI ya kitabibu kwenye vifaa vya Android vya bei nafuu bila utegemezi wa wingu. Tunavutiwa na kubana mfumo, mikakati ya upimaji kwa NLP ya kitabibu, na uboreshaji wa wakati wa kuendesha kwa vifaa vyenye rasilimali ndogo. Ikiwa unafanya kazi ya kufanya mifumo ya AI kuwa ndogo na ya haraka bila kuathiri uaminifu, tunapaswa kuzungumza.">Running clinical AI on low-cost Android devices with no cloud dependency. We're interested in model compression, quantization strategies for medical NLP, and runtime optimization for resource-constrained hardware. If you're working on making AI models smaller and faster without sacrificing reliability, we should talk.</p>
+        <div style="border: 1px solid var(--line); border-radius: 8px; padding: var(--space-md); background: rgba(255,255,255,0.02);">
+          <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #00A859; font-weight: var(--fw-semibold);">Edge AI</span>
+          <h3 style="font-size: var(--fs-body); font-weight: var(--fw-semibold); margin-top: 0.25rem;" data-en="Edge AI &amp; on-device inference" data-sw="AI ya ukingoni na uelekezaji wa kwenye kifaa">Edge AI &amp; on-device inference</h3>
+          <p class="text-muted text-small" style="margin-top: var(--space-xs);" data-en="Running clinical AI on low-cost Android devices with no cloud dependency. Model compression and quantization strategies for medical NLP." data-sw="Kuendesha AI ya kitabibu kwenye vifaa vya Android vya bei nafuu bila utegemezi wa wingu.">Running clinical AI on low-cost Android devices with no cloud dependency. Model compression and quantization strategies for medical NLP.</p>
         </div>
 
-        <div style="border-bottom: 1px solid var(--line); padding-bottom: var(--space-lg);">
-          <h3 style="font-size: var(--fs-body); font-weight: var(--fw-semibold);" data-en="Low-resource NLP and Swahili language technology" data-sw="NLP ya rasilimali chache na teknolojia ya lugha ya Kiswahili">Low-resource NLP and Swahili language technology</h3>
-          <p class="text-muted" style="margin-top: var(--space-xs);" data-en="Swahili is spoken by over 100 million people but remains dramatically under-resourced in NLP. Our Sema project is one approach, but there's enormous room for collaboration on Swahili clinical terminology standardization, corpus development, and evaluation benchmarks for medical Swahili understanding." data-sw="Kiswahili kinazungumzwa na zaidi ya watu milioni 100 lakini kinabaki na rasilimali chache sana katika NLP. Mradi wetu wa Sema ni mbinu moja, lakini kuna nafasi kubwa ya ushirikiano katika usanifu wa istilahi za kitabibu za Kiswahili, uendelezaji wa corpus, na vipimo vya tathmini kwa uelewa wa Kiswahili cha kitabibu.">Swahili is spoken by over 100 million people but remains dramatically under-resourced in NLP. Our Sema project is one approach, but there's enormous room for collaboration on Swahili clinical terminology standardization, corpus development, and evaluation benchmarks for medical Swahili understanding.</p>
+        <div style="border: 1px solid var(--line); border-radius: 8px; padding: var(--space-md); background: rgba(255,255,255,0.02);">
+          <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #00A3E0; font-weight: var(--fw-semibold);">Linguistics</span>
+          <h3 style="font-size: var(--fs-body); font-weight: var(--fw-semibold); margin-top: 0.25rem;" data-en="Swahili clinical NLP technology" data-sw="NLP ya Kiswahili ya kitabibu">Swahili clinical NLP technology</h3>
+          <p class="text-muted text-small" style="margin-top: var(--space-xs);" data-en="Swahili is the lingua franca of primary healthcare across East Africa. Collaboration on Swahili clinical terminology standardization, corpus development, and evaluation benchmarks." data-sw="Kiswahili ndiyo lugha kuu ya huduma ya kwanza ya afya kote Afrika Mashariki. Ushirikiano katika kusanifisha istilahi za kitabibu za Kiswahili, uundaji wa data, na tathmini.">Swahili is the lingua franca of primary healthcare across East Africa. Collaboration on Swahili clinical terminology standardization, corpus development, and evaluation benchmarks.</p>
         </div>
 
-        <div style="border-bottom: 1px solid var(--line); padding-bottom: var(--space-lg);">
-          <h3 style="font-size: var(--fs-body); font-weight: var(--fw-semibold);" data-en="Health informatics and clinical decision support" data-sw="Taarifa za afya na msaada wa maamuzi ya kitabibu">Health informatics and clinical decision support</h3>
-          <p class="text-muted" style="margin-top: var(--space-xs);" data-en="Clinical decision support in low-resource settings is fundamentally different from CDSS in well-resourced hospitals. We're interested in collaborators who understand the realities of primary healthcare in sub-Saharan Africa: how clinicians actually make decisions, what information they actually need, and how technology can support rather than complicate existing workflows." data-sw="Msaada wa maamuzi ya kitabibu katika mazingira ya rasilimali chache ni tofauti kabisa na CDSS katika hospitali zenye rasilimali nzuri. Tunavutiwa na washirikiano wanaolewa ukweli wa huduma ya msingi ya afya katika Afrika Kusini mwa Sahara: jinsi madaktari wanavyofanya maamuzi, taarifa gani wanayohitaji, na jinsi teknolojia inavyoweza kusaidia badala ya kutatiza mtiririko uliopo wa kazi.">Clinical decision support in low-resource settings is fundamentally different from CDSS in well-resourced hospitals. We're interested in collaborators who understand the realities of primary healthcare in sub-Saharan Africa: how clinicians actually make decisions, what information they actually need, and how technology can support rather than complicate existing workflows.</p>
+        <div style="border: 1px solid var(--line); border-radius: 8px; padding: var(--space-md); background: rgba(255,255,255,0.02);">
+          <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #7850B9; font-weight: var(--fw-semibold);">Informatics</span>
+          <h3 style="font-size: var(--fs-body); font-weight: var(--fw-semibold); margin-top: 0.25rem;" data-en="Clinical decision support systems" data-sw="Mifumo ya msaada wa maamuzi">Clinical decision support systems</h3>
+          <p class="text-muted text-small" style="margin-top: var(--space-xs);" data-en="CDSS tailored to the operational realities of primary healthcare in sub-Saharan Africa: frontline workflow integration and zero cognitive load." data-sw="CDSS iliyoundwa kwa uhalisia wa huduma ya msingi ya afya: kuondoa mzigo wa kiakili bila kukatiza mtiririko.">CDSS tailored to the operational realities of primary healthcare in sub-Saharan Africa: frontline workflow integration and zero cognitive load.</p>
         </div>
 
-        <div style="border-bottom: 1px solid var(--line); padding-bottom: var(--space-lg);">
-          <h3 style="font-size: var(--fs-body); font-weight: var(--fw-semibold);" data-en="Clinical validation and impact measurement" data-sw="Uthibitishaji wa kitabibu na upimaji wa athari">Clinical validation and impact measurement</h3>
-          <p class="text-muted" style="margin-top: var(--space-xs);" data-en="We need to measure whether ClerQ actually improves clinical outcomes, not just whether clinicians use it. If you're working on frameworks for evaluating AI-assisted clinical decision-making in real-world primary care settings, we'd value that collaboration highly." data-sw="Tunahitaji kupima kama ClerQ inaboresha matokeo ya kitabibu, si tu kama madaktari wanaitumia. Ikiwa unafanya kazi kwenye mifumo ya kutathmini maamuzi ya kitabibu yanayosaidiwa na AI katika mazingira halisi ya huduma ya msingi, tungethamini ushirikiano huo sana.">We need to measure whether ClerQ actually improves clinical outcomes, not just whether clinicians use it. If you're working on frameworks for evaluating AI-assisted clinical decision-making in real-world primary care settings, we'd value that collaboration highly.</p>
-        </div>
-
-        <div>
-          <h3 style="font-size: var(--fs-body); font-weight: var(--fw-semibold);" data-en="Rule verification &amp; Clinical MCP integration (Hakiki)" data-sw="Uthibitishaji wa sheria &amp; Ushirikiano wa MCP ya Kitabibu (Hakiki)">Rule verification &amp; Clinical MCP integration (Hakiki)</h3>
-          <p class="text-muted" style="margin-top: var(--space-xs);" data-en="For regulatory authorities, health ministries, and clinical AI developers seeking auditable access to declarative STG/NEMLIT guidelines. We collaborate on deterministic rule schemas, bar-crossing confidence algorithms, and Model Context Protocol interfaces for clinical tooling." data-sw="Kwa mamlaka za udhibiti, wizara za afya, na waandaaji wa AI ya kitabibu wanaotafuta ufikiaji unaoweza kukaguliwa wa miongozo ya STG/NEMLIT ya tamko. Tunashirikiana kwenye mifumo ya sheria za kidhamira, algoriti za ujasiri wa kuvuka kizingiti, na violesura vya Model Context Protocol kwa zana za kitabibu.">For regulatory authorities, health ministries, and clinical AI developers seeking auditable access to declarative STG/NEMLIT guidelines. We collaborate on deterministic rule schemas, bar-crossing confidence algorithms, and Model Context Protocol interfaces for clinical tooling.</p>
+        <div style="border: 1px solid var(--line); border-radius: 8px; padding: var(--space-md); background: rgba(255,255,255,0.02);">
+          <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #D97706; font-weight: var(--fw-semibold);">Validation</span>
+          <h3 style="font-size: var(--fs-body); font-weight: var(--fw-semibold); margin-top: 0.25rem;" data-en="Clinical validation &amp; impact" data-sw="Uthibitishaji na upimaji wa matokeo">Clinical validation &amp; impact</h3>
+          <p class="text-muted text-small" style="margin-top: var(--space-xs);" data-en="Rigorous frameworks for evaluating AI-assisted clinical decision-making in real-world primary care and district hospital settings." data-sw="Mifumo thabiti ya kutathmini maamuzi ya kitabibu yanayosaidiwa na AI katika zahanati na hospitali za wilaya.">Rigorous frameworks for evaluating AI-assisted clinical decision-making in real-world primary care and district hospital settings.</p>
         </div>
 
       </div>
@@ -114,41 +136,13 @@
     <div class="container">
       <h2 data-en="Current research partner" data-sw="Mshirika wa utafiti wa sasa">Current research partner</h2>
       <h3 style="margin-top: var(--space-md);">Nama Labs</h3>
-      <p style="margin-top: var(--space-sm);" data-en="Nama Labs is ClerQ's research partner on Sema and Rafiki. Co-founded by Emmanuel Chesco, the studio brings deep technical research in NLP architectures and edge AI systems, complementing ClerQ's clinical domain knowledge and field deployment constraints." data-sw="Nama Labs ni mshirika wa utafiti wa ClerQ katika Sema na Rafiki. Ikiwa imeanzishwa kwa pamoja na Emmanuel Chesco, studio hiyo inaleta utafiti wa kina wa kiufundi katika mifumo ya NLP na AI ya ukingoni, ikikamilisha maarifa ya uwanja wa kitabibu wa ClerQ na vikwazo vya usambazaji uwanjani.">
+      <p style="margin-top: var(--space-sm);" data-en="Nama Labs is ClerQ's research partner on Sema and Rafiki. Co-founded by Emmanuel Chesco, the studio brings deep technical research in NLP architectures and edge AI systems, complementing ClerQ's clinical domain knowledge and field deployment constraints." data-sw="Nama Labs ni mshirika wa utafiti wa ClerQ katika Sema na Rafiki. Ikiwa imeanzishwa kwa pamoja na Emmanuel Chesco, studio hiyo inaleta utafiti wa kina wa kiufundi katika mifumo ya NLP na AI ya ukingoni.">
         Nama Labs is ClerQ's research partner on Sema and Rafiki. Co-founded by Emmanuel Chesco, the studio brings deep technical research in NLP architectures and edge AI systems, complementing ClerQ's clinical domain knowledge and field deployment constraints.
-      </p>
-      <p style="margin-top: var(--space-sm);" data-en="Both projects are open-source, and both are ongoing. The partnership model is straightforward: shared research goals, shared credit, open publication." data-sw="Miradi yote miwili ni ya chanzo wazi, na yote inaendelea. Mfumo wa ushirikiano ni rahisi: malengo ya utafiti yanayoshirikiwa, sifa zinazoshirikiwa, uchapishaji wazi.">
-        Both projects are open-source, and both are ongoing. The partnership model is straightforward: shared research goals, shared credit, open publication.
       </p>
       <div style="margin-top: var(--space-md);">
         <a href="https://linkedin.com/in/nama-labs-07a475433" class="ext-link" target="_blank" rel="noopener noreferrer">
           <span>Nama Labs on LinkedIn</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== WAVE DIVIDER ====== -->
-  <svg class="wave-divider" viewBox="0 0 400 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M0 20 C50 20, 75 5, 125 5 S200 35, 250 35 S325 5, 375 5 S400 20, 400 20"/>
-  </svg>
-
-  <!-- ====== REACH OUT ====== -->
-  <section class="section section--lg" id="partner-contact">
-    <div class="container">
-      <h2 data-en="Reach out" data-sw="Wasiliana nasi">Reach out</h2>
-      <p style="margin-top: var(--space-md);" data-en="If any of the above resonates with your work, we'd like to hear from you. No formal process, no application form. Just tell us who you are, what you're working on, and where you see overlap." data-sw="Ikiwa yoyote ya hapo juu inaendana na kazi yako, tungependa kusikia kutoka kwako. Hakuna mchakato rasmi, hakuna fomu ya maombi. Tuambie tu wewe ni nani, unafanya kazi gani, na unaona mwingiliano wapi.">
-        If any of the above resonates with your work, we'd like to hear from you. No formal process, no application form. Just tell us who you are, what you're working on, and where you see overlap.
-      </p>
-      <div class="socials" style="margin-top: var(--space-md);">
-        <a href="mailto:research@clerqintelligence.com" class="social-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          <span data-en="Research collaborations: research@clerqintelligence.com" data-sw="Ushirikiano wa utafiti: research@clerqintelligence.com">Research collaborations: research@clerqintelligence.com</span>
-        </a>
-        <a href="mailto:hq@clerqintelligence.site" class="social-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          <span data-en="General inquiries: hq@clerqintelligence.site" data-sw="Maswali ya kawaida: hq@clerqintelligence.site">General inquiries: hq@clerqintelligence.site</span>
         </a>
       </div>
     </div>
@@ -162,6 +156,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js"></script>
+  <script src="/js/main.js?v=20261111_08"></script>
 </body>
 </html>

@@ -18,9 +18,27 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/main.css?v=20261111_08">
 </head>
 <body>
+
+  <!-- ====== TDHW 2026 INSTITUTIONAL BAR ====== -->
+  <div class="tdhw-institutional-bar" role="region" aria-label="Tanzania Digital Health Week Announcement">
+    <div class="tdhw-institutional-bar__inner">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
+        <span class="tdhw-institutional-bar__tag">TDHW 2026</span>
+        <span data-en="Live at Tanzania Digital Health Week 2026 · Demonstrating Offline Decision Support for Frontline Clinicians" data-sw="Mubashara: Wiki ya Afya ya Kidijitali Tanzania 2026 · Tukionyesha Msaada wa Maamuzi ya Kitabibu Nje ya Mtandao">
+          Live at Tanzania Digital Health Week 2026 · Demonstrating Offline Decision Support for Frontline Clinicians
+        </span>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+        <a href="/#keynote-film" class="tdhw-institutional-bar__link">
+          <span data-en="Watch Keynote Film" data-sw="Tazama Filamu Kuu">Watch Keynote Film</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- ====== NAVIGATION ====== -->
   <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
@@ -58,8 +76,8 @@
   <section class="section section--gradient-top" id="research-approach">
     <div class="container">
       <h2 data-en="Our approach to research" data-sw="Mbinu yetu ya utafiti">Our approach to research</h2>
-      <p style="margin-top: var(--space-md);" data-en="ClerQ's research agenda is driven by a clear mission: transforming African healthcare by building technology that works on hardware frontline clinics can actually afford, on connectivity they can actually rely on, in languages clinicians and patients actually speak. Starting from Tanzania's frontline realities, we tackle the hardest operational constraints first." data-sw="Ajenda ya utafiti ya ClerQ inaongozwa na dhamira iliyo wazi: kubadilisha huduma ya afya ya Afrika kwa kujenga teknolojia inayofanya kazi kwenye vifaa ambavyo vituo vya afya vya mstari wa mbele vinaweza kumudu, kwenye muunganisho inaoaminika, katika lugha ambazo madaktari na wagonjwa wanazungumza. Kuanzia uhalisia wa mstari wa mbele nchini Tanzania, tunashughulikia changamoto ngumu zaidi kwanza.">
-        ClerQ's research agenda is driven by a clear mission: transforming African healthcare by building technology that works on hardware frontline clinics can actually afford, on connectivity they can actually rely on, in languages clinicians and patients actually speak. Starting from Tanzania's frontline realities, we tackle the hardest operational constraints first.
+      <p style="margin-top: var(--space-md);" data-en="ClerQ's research agenda is driven by a clear mission: transforming African healthcare by building technology that works on hardware frontline clinics afford, on connectivity they rely on, and in the languages clinicians and patients speak daily. Starting from Tanzania's frontline realities, we tackle the hardest operational constraints first." data-sw="Ajenda ya utafiti ya ClerQ inaongozwa na dhamira iliyo wazi: kubadilisha huduma ya afya ya Afrika kwa kujenga teknolojia inayofanya kazi kwenye vifaa ambavyo vituo vya afya vya mstari wa mbele vinamudu, kwenye muunganisho uliopo, na katika lugha ambazo madaktari na wagonjwa wanazungumza kila siku. Kuanzia uhalisia wa mstari wa mbele nchini Tanzania, tunashughulikia changamoto ngumu zaidi kwanza.">
+        ClerQ's research agenda is driven by a clear mission: transforming African healthcare by building technology that works on hardware frontline clinics afford, on connectivity they rely on, and in the languages clinicians and patients speak daily. Starting from Tanzania's frontline realities, we tackle the hardest operational constraints first.
       </p>
       <p style="margin-top: var(--space-sm);" data-en="We publish what we can, open-source what's useful, and share what we learn. Not because openness is fashionable, but because the problems we're working on exist in dozens of countries with similar constraints, and no single team is going to solve them alone." data-sw="Tunachapisha tunachoweza, tunafungua chanzo cha kinachofaa, na tunashiriki tunachojifunza. Si kwa sababu uwazi ni mtindo, bali kwa sababu matatizo tunayofanya kazi nayo yapo katika nchi nyingi zenye vikwazo sawa, na hakuna timu moja itakayoyatatua peke yake.">
         We publish what we can, open-source what's useful, and share what we learn. Not because openness is fashionable, but because the problems we're working on exist in dozens of countries with similar constraints, and no single team is going to solve them alone.
@@ -90,20 +108,31 @@
       </p>
 
       <h3 style="margin-top: var(--space-lg);" data-en="The approach" data-sw="Mbinu">The approach</h3>
-      <p style="margin-top: var(--space-sm);" data-en="Sema takes a deliberately different path: what we call 'The Boring Solution'. Instead of asking a generative model to translate clinical Swahili into fluent English and back, which fails silently and dangerously when it's wrong, Sema anchors. It strips Swahili input down word by word to its dictionary root, tags the grammar, attaches a plain gloss, and hands that structural skeleton to a reasoning model. The output returns through controlled bilingual templates rather than hallucinated prose." data-sw="Sema inachukua njia tofauti kwa makusudi: kile tunachokiita 'The Boring Solution'. Badala ya kuomba mfumo wa uzalishaji kutafsiri Kiswahili cha kitabibu kuwa Kiingereza fasaha na kurudi, ambacho kinashindwa kimya kimya na kwa hatari kinapokosea, Sema inashikilia. Inachambua maingizo ya Kiswahili neno kwa neno hadi kwenye shina la kamusi, kuweka lebo ya sarufi, kuambatanisha maelezo wazi, na kukabidhi kiunzi hicho cha muundo kwa mfumo wa uchambuzi. Matokeo yanarudi kupitia violezo vya lugha mbili vilivyodhibitiwa badala ya maandishi ya kubuni.">
-        Sema takes a deliberately different path: what we call "The Boring Solution". Instead of asking a generative model to translate clinical Swahili into fluent English and back, which fails silently and dangerously when it's wrong, Sema anchors. It strips Swahili input down word by word to its dictionary root, tags the grammar, attaches a plain gloss, and hands that structural skeleton to a reasoning model. The output returns through controlled bilingual templates rather than hallucinated prose.
-      </p>
-      <p style="margin-top: var(--space-sm);" data-en="We publish our results openly, including negative ones. We found that past certain model sizes, morphological anchoring added little to conversational fluency. However, in document retrieval, stripping Swahili's grammatical prefixes and suffixes before indexing took clinical guideline retrieval benchmarks from barely passing to near-perfect. That finding directly powers Lucy's instant STG lookups on edge devices." data-sw="Tunachapisha matokeo yetu kwa uwazi, ikiwa ni pamoja na yale hasi. Tuligundua kuwa zaidi ya saizi fulani za mifumo, ushikiliaji wa kimofolojia uliongeza kidogo kwenye ufasaha wa mazungumzo. Hata hivyo, katika urejeshaji wa nyaraka, kuondoa viambishi awali na tamati vya kisarufi vya Kiswahili kabla ya kuorodhesha kulipeleka vipimo vya kurejesha miongozo ya kitabibu kutoka kufaulu kidogo hadi karibu ukamilifu. Ugunduzi huo unaendesha moja kwa moja utafutaji wa haraka wa STG wa Lucy kwenye vifaa vya ukingoni.">
-        We publish our results openly, including negative ones. We found that past certain model sizes, morphological anchoring added little to conversational fluency. However, in document retrieval, stripping Swahili's grammatical prefixes and suffixes before indexing took clinical guideline retrieval benchmarks from barely passing to near-perfect. That finding directly powers Lucy's instant STG lookups on edge devices.
+      <p style="margin-top: var(--space-sm);" data-en="Sema provides offline semantic anchoring for low-resource languages. Sema anchors clinical Swahili locally on device. Implemented in high-performance Rust with zero runtime dependencies, Sema resolves surface Swahili words to lemmas, parts of speech, English glosses, and derivational roots in microseconds from a compact 1.8 MB lexicon directly on the phone." data-sw="Sema inatoa ushikiliaji wa kisemantiki nje ya mtandao kwa lugha zenye rasilimali chache. Sema inashikilia Kiswahili cha kitabibu ndani ya kifaa moja kwa moja. Imejengwa kwa Rust yenye utendaji wa juu bila utegemezi wa nje, Sema inachambua maneno ya Kiswahili kuwa mashina, aina za maneno, na maana kwa sekunde ndogo kutoka leksikoni ndogo ya 1.8 MB moja kwa moja kwenye simu.">
+        Sema provides offline semantic anchoring for low-resource languages. Sema anchors clinical Swahili locally on device. Implemented in high-performance Rust with zero runtime dependencies, Sema resolves surface Swahili words to lemmas, parts of speech, English glosses, and derivational roots in microseconds from a compact 1.8 MB lexicon directly on the phone.
       </p>
 
-      <h3 style="margin-top: var(--space-lg);" data-en="Status" data-sw="Hali">Status</h3>
-      <p style="margin-top: var(--space-sm);" data-en="Sema is active, ongoing work. The core pipeline is functional and powers Lucy's bilingual capabilities in the current ClerQ prototype. We continue to expand the structured representation vocabulary and improve anchor accuracy across clinical domains." data-sw="Sema ni kazi inayoendelea. Mfumo wa msingi unafanya kazi na unaendesha uwezo wa lugha mbili wa Lucy katika mfano wa sasa wa ClerQ. Tunaendelea kupanua msamiati wa uwakilishi ulioundwa na kuboresha usahihi wa ushikiliaji katika nyanja za kitabibu.">
-        Sema is active, ongoing work. The core pipeline is functional and powers Lucy's bilingual capabilities in the current ClerQ prototype. We continue to expand the structured representation vocabulary and improve anchor accuracy across clinical domains.
+      <p style="margin-top: var(--space-sm);" data-en="This powers ClerQ across all its operational flavours:" data-sw="Hii inawezesha ClerQ katika miundo yake yote:">
+        This powers ClerQ across all its operational flavours:
       </p>
 
-      <div style="margin-top: var(--space-md); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; max-width: 580px;">
-        <img src="/assets/images/sema-manuscript.jpg" alt="Sema morphological linguistic notes" style="width: 100%; height: auto; display: block; filter: contrast(105%);" loading="lazy">
+      <div style="margin-top: var(--space-md); display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-md);">
+        <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: var(--space-md);">
+          <h4 style="font-size: var(--fs-body); font-weight: var(--fw-semibold); color: #7850B9;" data-en="ClerQ CDS Mobile" data-sw="ClerQ CDS ya Simu">ClerQ CDS Mobile</h4>
+          <p class="text-small text-muted" style="margin-top: 0.5rem;" data-en="Runs completely offline on budget Android phones without network signal. Over 19,700 lemmas and morphology affix tables resolve complex verb conjugations instantly." data-sw="Inafanya kazi bila mtandao kwenye simu za kawaida za Android. Zaidi ya mashina 19,700 na jedwali za mofolojia zinatambua mnyambuliko wa vitenzi papo hapo.">Runs completely offline on budget Android phones without network signal. Over 19,700 lemmas and morphology affix tables resolve complex verb conjugations instantly.</p>
+        </div>
+        <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: var(--space-md);">
+          <h4 style="font-size: var(--fs-body); font-weight: var(--fw-semibold); color: #0284C7;" data-en="Lucy AI Clinical Assistant" data-sw="Msaidizi wa Lucy AI">Lucy AI Clinical Assistant</h4>
+          <p class="text-small text-muted" style="margin-top: 0.5rem;" data-en="Enables the double-pass architecture: Swahili symptoms anchor to clinical concepts, the reasoning model evaluates in English, and results render via verified bilingual clinical templates." data-sw="Inawezesha muundo wa hatua mbili: dalili za Kiswahili zinashikiliwa, mfumo unachambua, na majibu yanatolewa kupitia violezo vilivyothibitishwa vya lugha mbili.">Enables the double-pass architecture: Swahili symptoms anchor to clinical concepts, the reasoning model evaluates in English, and results render via verified bilingual clinical templates.</p>
+        </div>
+        <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: var(--space-md);">
+          <h4 style="font-size: var(--fs-body); font-weight: var(--fw-semibold); color: #00A859;" data-en="STG 2026 Protocol Indexing" data-sw="Uorodheshaji wa STG 2026">STG 2026 Protocol Indexing</h4>
+          <p class="text-small text-muted" style="margin-top: 0.5rem;" data-en="Stripping Swahili inflectional prefixes and suffixes before indexing turns national Standard Treatment Guidelines into near-instant, deterministic search hits." data-sw="Kuondoa viambishi awali na tamati vya Kiswahili kabla ya kuorodhesha kunafanya miongozo ya kitaifa ya STG kupatikana kwa haraka na usahihi mkubwa.">Stripping Swahili inflectional prefixes and suffixes before indexing turns national Standard Treatment Guidelines into near-instant, deterministic search hits.</p>
+        </div>
+      </div>
+
+      <div style="margin: var(--space-lg) auto 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; max-width: 720px; box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
+        <img src="/assets/images/sema-manuscript.jpg" alt="Sema morphological linguistic notes and STG clinical guidelines" style="width: 100%; height: auto; display: block;" loading="lazy">
       </div>
 
       <div class="research-links" style="margin-top: var(--space-md);">
@@ -139,11 +168,11 @@
       </p>
 
       <h3 style="margin-top: var(--space-lg);" data-en="The approach" data-sw="Mbinu">The approach</h3>
-      <p style="margin-top: var(--space-sm);" data-en="Rafiki is a digital twin training framework designed for edge-native systems. Instead of training once and deploying everywhere, Rafiki enables models to learn from the specific environment they're deployed in. It creates a digital twin of the local clinical context: the disease patterns, the available resources, and the workflow rhythms, using that twin to continuously refine the system's behaviour without sending patient data anywhere." data-sw="Rafiki ni mfumo wa mafunzo ya pacha wa kidijitali uliobuniwa kwa mifumo ya ukingoni. Badala ya kufunza mara moja na kusambaza kila mahali, Rafiki inawezesha mifumo kujifunza kutoka mazingira mahususi inayosambazwa. Inaunda pacha wa kidijitali wa muktadha wa kitabibu wa ndani: mifumo ya magonjwa, rasilimali zinazopatikana, na midundo ya mtiririko wa kazi, ikitumia pacha huyo kuboresha tabia ya mfumo kwa kuendelea bila kutuma data ya mgonjwa popote.">
-        Rafiki is a digital twin training framework designed for edge-native systems. Instead of training once and deploying everywhere, Rafiki enables models to learn from the specific environment they're deployed in. It creates a digital twin of the local clinical context: the disease patterns, the available resources, and the workflow rhythms, using that twin to continuously refine the system's behaviour without sending patient data anywhere.
+      <p style="margin-top: var(--space-sm);" data-en="Rafiki is a digital twin training framework designed for edge-native systems. Rafiki enables models to learn directly from the specific environment they serve. It creates a digital twin of the local clinical context: disease patterns, available resources, and workflow rhythms, using that twin to continuously refine system performance without sending patient data across networks." data-sw="Rafiki ni mfumo wa mafunzo ya pacha wa kidijitali uliobuniwa kwa mifumo ya ukingoni. Rafiki inawezesha mifumo kujifunza moja kwa moja kutoka mazingira mahususi inayosambazwa. Inaunda pacha wa kidijitali wa muktadha wa kitabibu wa ndani: mifumo ya magonjwa, rasilimali zilizopo, na midundo ya mtiririko wa kazi bila kutuma data nje.">
+        Rafiki is a digital twin training framework designed for edge-native systems. Rafiki enables models to learn directly from the specific environment they serve. It creates a digital twin of the local clinical context: disease patterns, available resources, and workflow rhythms, using that twin to continuously refine system performance without sending patient data across networks.
       </p>
-      <p style="margin-top: var(--space-sm);" data-en="All computation stays on-device. All data stays local. The digital twin evolves with the facility, not against it." data-sw="Mahesabu yote yanabaki kwenye kifaa. Data yote inabaki ndani. Pacha wa kidijitali anabadilika na kituo, si dhidi yake.">
-        All computation stays on-device. All data stays local. The digital twin evolves with the facility, not against it.
+      <p style="margin-top: var(--space-sm);" data-en="All computation stays on-device. All data stays local. The digital twin evolves directly alongside facility operational practices." data-sw="Mahesabu yote yanabaki kwenye kifaa. Data yote inabaki ndani. Pacha wa kidijitali anabadilika sambamba na taratibu za kituo.">
+        All computation stays on-device. All data stays local. The digital twin evolves directly alongside facility operational practices.
       </p>
 
       <h3 style="margin-top: var(--space-lg);" data-en="Status" data-sw="Hali">Status</h3>
@@ -151,8 +180,8 @@
         Rafiki is in active development. The framework architecture is established and we're working on validation across different facility types. This is early-stage work, we're transparent about that, but the direction is clear and the collaboration with Nama Labs continues to be productive.
       </p>
 
-      <div style="margin-top: var(--space-md); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; max-width: 580px;">
-        <img src="/assets/images/rafiki-mesh.jpg" alt="Rafiki edge digital twin topological model" style="width: 100%; height: auto; display: block; filter: contrast(105%);" loading="lazy">
+      <div style="margin: var(--space-lg) auto 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; max-width: 720px; box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
+        <img src="/assets/images/rafiki-mesh.jpg" alt="Rafiki edge digital twin field validation with Tanzanian clinicians" style="width: 100%; height: auto; display: block;" loading="lazy">
       </div>
 
       <div class="research-links" style="margin-top: var(--space-md);">
@@ -175,27 +204,29 @@
   <!-- ====== HAKIKI ====== -->
   <section class="section research-section" id="hakiki">
     <div class="container">
-      <div style="display: flex; align-items: center; gap: var(--space-sm); flex-wrap: wrap;">
-        <img src="/assets/logos/hakiki-logo.svg" alt="Hakiki" style="height: 38px; width: auto;">
+      <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-sm); flex-wrap: wrap;">
+        <img src="/assets/logos/hakiki-logo.svg" alt="Hakiki" style="height: 38px; width: auto; margin: 0 auto;">
       </div>
       <p class="text-muted" style="margin-top: 0.5em;" data-en="Declarative guideline verification and clinical Model Context Protocol" data-sw="Uthibitishaji wa miongozo ya tamko na Model Context Protocol ya kitabibu">Declarative guideline verification and clinical Model Context Protocol</p>
 
       <h3 style="margin-top: var(--space-lg);" data-en="The problem" data-sw="Tatizo">The problem</h3>
-      <p style="margin-top: var(--space-sm);" data-en="Clinical AI systems often embed diagnostic and treatment rules directly in complex neural weights or opaque codebases. When national guidelines (like Tanzania's Standard Treatment Guidelines and NEMLIT) change, updating black-box models requires expensive retraining and introduces unpredictable behavioral shifts. Furthermore, external regulators and health authorities cannot inspect how a conclusion was reached line-by-line against statutory protocols." data-sw="Mifumo ya AI ya kitabibu mara nyingi hufunga sheria za utambuzi na matibabu moja kwa moja katika uzito tata wa neva au mifumo ya msimbo isiyo wazi. Miongozo ya kitaifa (kama Miongozo ya Tiba ya Kawaida ya Tanzania na NEMLIT) inapobadilika, kusasisha mifumo ya boksi jeusi kunahitaji mafunzo upya ya gharama kubwa na huleta mabadiliko ya tabia yasiyotabirika. Zaidi ya hayo, wadhibiti wa nje na mamlaka za afya hawawezi kukagua jinsi hitimisho lilivyofikiwa mstari kwa mstari dhidi ya itifaki za kisheria.">
-        Clinical AI systems often embed diagnostic and treatment rules directly in complex neural weights or opaque codebases. When national guidelines (like Tanzania's Standard Treatment Guidelines and NEMLIT) change, updating black-box models requires expensive retraining and introduces unpredictable behavioral shifts. Furthermore, external regulators and health authorities cannot inspect how a conclusion was reached line-by-line against statutory protocols.
+      <p style="margin-top: var(--space-sm);" data-en="Clinical AI systems often embed diagnostic and treatment rules directly in complex neural weights or opaque codebases. When national guidelines (like Tanzania's Standard Treatment Guidelines, STG 2026, and NEMLIT) change, updating black-box models requires expensive retraining and introduces unpredictable behavioral shifts. Furthermore, external regulators and health authorities cannot inspect how a conclusion was reached line-by-line against statutory protocols." data-sw="Mifumo ya AI ya kitabibu mara nyingi hufunga sheria za utambuzi na matibabu moja kwa moja katika uzito tata wa neva au mifumo ya msimbo isiyo wazi. Miongozo ya kitaifa (kama Miongozo ya Tiba ya Kawaida ya Tanzania, STG 2026, na NEMLIT) inapobadilika, kusasisha mifumo ya boksi jeusi kunahitaji mafunzo upya ya gharama kubwa na huleta mabadiliko ya tabia yasiyotabirika. Zaidi ya hayo, wadhibiti wa nje na mamlaka za afya hawawezi kukagua jinsi hitimisho lilivyofikiwa mstari kwa mstari dhidi ya itifaki za kisheria.">
+        Clinical AI systems often embed diagnostic and treatment rules directly in complex neural weights or opaque codebases. When national guidelines (like Tanzania's Standard Treatment Guidelines, STG 2026, and NEMLIT) change, updating black-box models requires expensive retraining and introduces unpredictable behavioral shifts. Furthermore, external regulators and health authorities cannot inspect how a conclusion was reached line-by-line against statutory protocols.
       </p>
 
       <h3 style="margin-top: var(--space-lg);" data-en="The approach" data-sw="Mbinu">The approach</h3>
-      <p style="margin-top: var(--space-sm);" data-en="Hakiki completely decouples clinical rule logic from application software. Every symptom weight, threshold, and contraindication is encoded as declarative, versioned data mapped verbatim to page and paragraph citations of Tanzania's STG. Hakiki's confidence scoring uses deterministic bar-crossing ratios rather than machine-learned probabilities: clinical severity saturates immediately upon encountering red-flag criteria rather than awaiting majority votes of symptoms." data-sw="Hakiki inatenganisha kabisa mantiki ya sheria ya kitabibu na programu ya matumizi. Kila uzito wa dalili, kizingiti, na kizuizi kimewekwa kama data ya tamko, iliyotolewa matoleo iliyopangwa neno kwa neno kwa manukuu ya ukurasa na aya ya STG ya Tanzania. Alama za ujasiri za Hakiki hutumia uwiano wa kuvuka kizingiti badala ya uwezekano wa mashine: ukali wa kitabibu unajaa mara moja unapokutana na vigezo vya hatari badala ya kusubiri kura nyingi za dalili.">
-        Hakiki completely decouples clinical rule logic from application software. Every symptom weight, threshold, and contraindication is encoded as declarative, versioned data mapped verbatim to page and paragraph citations of Tanzania's STG. Hakiki's confidence scoring uses deterministic bar-crossing ratios rather than machine-learned probabilities: clinical severity saturates immediately upon encountering red-flag criteria rather than awaiting majority votes of symptoms.
+      <p style="margin-top: var(--space-sm);" data-en="Hakiki completely decouples clinical rule logic from application software. Every symptom weight, threshold, and contraindication is encoded as declarative, versioned data mapped verbatim to page and paragraph citations of Tanzania's STG 2026. Hakiki's confidence scoring uses deterministic bar-crossing ratios: clinical severity saturates immediately upon encountering red-flag criteria established by national pediatric and adult guidelines." data-sw="Hakiki inatenganisha kabisa mantiki ya sheria ya kitabibu na programu ya matumizi. Kila uzito wa dalili, kizingiti, na kizuizi kimewekwa kama data ya tamko, iliyotolewa matoleo iliyopangwa neno kwa neno kwa manukuu ya ukurasa na aya ya STG 2026 ya Tanzania. Alama za Hakiki hutumia uwiano wa moja kwa moja wa kizingiti cha kitabibu: ukali wa ugonjwa unathibitishwa mara moja unapokutana na vigezo vya hatari vilivyowekwa na miongozo ya kitaifa.">
+        Hakiki completely decouples clinical rule logic from application software. Every symptom weight, threshold, and contraindication is encoded as declarative, versioned data mapped verbatim to page and paragraph citations of Tanzania's STG 2026. Hakiki's confidence scoring uses deterministic bar-crossing ratios: clinical severity saturates immediately upon encountering red-flag criteria established by national pediatric and adult guidelines.
       </p>
       <p style="margin-top: var(--space-sm);" data-en="Additionally, Hakiki exposes a clinical Model Context Protocol (MCP) server. External AI agents (such as Claude, Cursor, or custom IDEs) can query Tanzania's STG rules directly through an auditable protocol layer that proposes candidate updates for human medical expert sign-off, decoupling who can reason over national guidelines from who built the original application." data-sw="Kwa kuongeza, Hakiki inafungua seva ya Model Context Protocol (MCP) ya kitabibu. Mifumo ya AI ya nje (kama Claude, Cursor, au IDE maalum) inaweza kuuliza sheria za STG za Tanzania moja kwa moja kupitia safu ya itifaki inayoweza kukaguliwa ambayo inapendekeza masasisho ya wagombea kwa ajili ya idhini ya wataalamu wa matibabu wa kibinadamu, ikitenganisha nani anayeweza kuchambua miongozo ya kitaifa na nani aliyejenga programu asili.">
         Additionally, Hakiki exposes a clinical Model Context Protocol (MCP) server. External AI agents (such as Claude, Cursor, or custom IDEs) can query Tanzania's STG rules directly through an auditable protocol layer that proposes candidate updates for human medical expert sign-off, decoupling who can reason over national guidelines from who built the original application.
       </p>
 
+
+
       <h3 style="margin-top: var(--space-lg);" data-en="Status" data-sw="Hali">Status</h3>
-      <p style="margin-top: var(--space-sm);" data-en="Hakiki is currently request-only for research partners, regulatory bodies, and clinical collaborators. It serves as the internal validation harness for Lucy's underlying reasoning rules." data-sw="Hakiki kwa sasa ni ya ombi pekee kwa washirika wa utafiti, vyombo vya udhibiti, na washiriki wa kitabibu. Inatumika kama kielelezo cha ndani cha uthibitishaji wa sheria za uchambuzi za Lucy.">
-        Hakiki is currently request-only for research partners, regulatory bodies, and clinical collaborators. It serves as the internal validation harness for Lucy's underlying reasoning rules.
+      <p style="margin-top: var(--space-sm);" data-en="Hakiki is currently request-only for research partners, regulatory bodies, and clinical collaborators. It is the internal validation harness for Lucy's underlying reasoning rules." data-sw="Hakiki kwa sasa ni ya ombi pekee kwa washirika wa utafiti, vyombo vya udhibiti, na washiriki wa kitabibu. Ni chombo cha ndani cha uthibitishaji wa sheria za uchambuzi za Lucy.">
+        Hakiki is currently request-only for research partners, regulatory bodies, and clinical collaborators. It is the internal validation harness for Lucy's underlying reasoning rules.
       </p>
 
       <div class="research-links" style="margin-top: var(--space-md);">
@@ -219,8 +250,8 @@
       <p style="margin-top: var(--space-md);" data-en="Our research roadmap is guided by clinical need, not by what's publishable. We're working on expanding ClerQ's coverage across more clinical domains within the STG, improving Lucy's reasoning on complex multi-condition presentations, and building validation frameworks that can measure real-world clinical impact, not just benchmark accuracy." data-sw="Ramani yetu ya utafiti inaongozwa na hitaji la kitabibu, si na kinachoweza kuchapishwa. Tunafanya kazi kupanua chanjo ya ClerQ katika nyanja zaidi za kitabibu ndani ya STG, kuboresha uchambuzi wa Lucy kuhusu hali ngumu za magonjwa mengi, na kujenga mifumo ya uthibitishaji inayoweza kupima athari halisi za kitabibu, si usahihi wa kipimo tu.">
         Our research roadmap is guided by clinical need, not by what's publishable. We're working on expanding ClerQ's coverage across more clinical domains within the STG, improving Lucy's reasoning on complex multi-condition presentations, and building validation frameworks that can measure real-world clinical impact, not just benchmark accuracy.
       </p>
-      <p style="margin-top: var(--space-sm);" data-en="If you're a researcher working on edge AI, low-resource NLP, clinical informatics, or health systems strengthening and you'd like to collaborate, we'd genuinely like to hear from you." data-sw="Ikiwa wewe ni mtafiti anayefanya kazi katika AI ya ukingoni, NLP ya rasilimali chache, informatiki ya kitabibu, au kuimarisha mifumo ya afya na ungependa kushirikiana, tungependa kweli kusikia kutoka kwako.">
-        If you're a researcher working on edge AI, low-resource NLP, clinical informatics, or health systems strengthening and you'd like to collaborate, we'd genuinely like to hear from you.
+      <p style="margin-top: var(--space-sm);" data-en="If you conduct research in edge AI, low-resource NLP, clinical informatics, or health systems strengthening and seek field collaborations, connect with our research team." data-sw="Ikiwa unafanya utafiti katika AI ya ukingoni, NLP ya rasilimali chache, informatiki ya kitabibu, au kuimarisha mifumo ya afya na ungependa kushirikiana, wasiliana na timu yetu ya utafiti.">
+        If you conduct research in edge AI, low-resource NLP, clinical informatics, or health systems strengthening and seek field collaborations, connect with our research team.
       </p>
       <div style="margin-top: var(--space-md);">
         <a href="/partners/" class="cta-link">
@@ -239,6 +270,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js"></script>
+  <script src="/js/main.js?v=20261111_08"></script>
 </body>
 </html>
