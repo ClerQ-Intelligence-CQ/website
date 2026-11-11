@@ -22,7 +22,7 @@
       base = '/' + clean;
     }
     // Append asset cache buster so mobile browsers never display stale media
-    return base + (base.indexOf('?') === -1 ? '?v=20261111_12' : '&v=20261111_12');
+    return base + (base.indexOf('?') === -1 ? '?v=20261111_13' : '&v=20261111_13');
   }
 
   // ============================================================
@@ -499,16 +499,16 @@
   // Mobile navigation toggle & collapsible overlay
   var navToggle = document.getElementById('nav-toggle');
   var navLinks = document.getElementById('nav-links');
-  var navBackdrop = document.getElementById('nav-backdrop');
   var navClose = document.getElementById('nav-close');
+  var mainNav = document.getElementById('main-nav');
   if (navToggle && navLinks) {
     function toggleMobileMenu(forceOpen) {
       var willOpen = typeof forceOpen === 'boolean' ? forceOpen : !navLinks.classList.contains('nav__links--open');
       navLinks.classList.toggle('nav__links--open', willOpen);
       navToggle.classList.toggle('nav__toggle--open', willOpen);
       navToggle.setAttribute('aria-expanded', String(willOpen));
-      if (navBackdrop) {
-        navBackdrop.classList.toggle('nav__backdrop--open', willOpen);
+      if (mainNav) {
+        mainNav.classList.toggle('nav--menu-open', willOpen);
       }
       document.body.style.overflow = willOpen ? 'hidden' : '';
     }
@@ -525,19 +525,13 @@
       });
     }
 
-    // Event delegation on navLinks for close button or links
+    // Direct event delegation on navLinks for close button or links
     navLinks.addEventListener('click', function (e) {
       if (e.target.closest('#nav-close') || e.target.closest('.nav__close')) {
         e.stopPropagation();
         toggleMobileMenu(false);
       }
     });
-
-    if (navBackdrop) {
-      navBackdrop.addEventListener('click', function () {
-        toggleMobileMenu(false);
-      });
-    }
 
     navLinks.querySelectorAll('.nav__link').forEach(function (link) {
       link.addEventListener('click', function () {
