@@ -22,7 +22,7 @@
       base = '/' + clean;
     }
     // Append asset cache buster so mobile browsers never display stale media
-    return base + (base.indexOf('?') === -1 ? '?v=20261111_11' : '&v=20261111_11');
+    return base + (base.indexOf('?') === -1 ? '?v=20261111_12' : '&v=20261111_12');
   }
 
   // ============================================================

@@ -92,7 +92,7 @@ html {
   scroll-padding-top: 80px;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -105,7 +105,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 
@@ -204,17 +204,18 @@ p {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 1000;
   padding: var(--space-sm) var(--space-md);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   transition: border-color var(--duration-normal) var(--ease-out),
-              background-color var(--duration-normal) var(--ease-out);
+              background-color var(--duration-normal) var(--ease-out),
+              box-shadow var(--duration-normal) var(--ease-out);
 }
 
 .nav__backdrop {
@@ -236,7 +237,8 @@ p {
 
 .nav--scrolled {
   border-bottom-color: var(--line);
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .nav__logo {
@@ -381,7 +383,7 @@ p {
     radial-gradient(ellipse 70% 50% at 50% 25%, rgba(0, 168, 89, 0.12) 0%, transparent 65%),
     radial-gradient(ellipse 50% 40% at 80% 50%, rgba(0, 163, 224, 0.08) 0%, transparent 55%),
     linear-gradient(180deg, rgba(7, 8, 10, 0.72) 0%, rgba(7, 8, 10, 0.94) 100%),
-    url('/assets/images/clinician-care.jpg?v=20261111_11');
+    url('/assets/images/clinician-care.jpg?v=20261111_12');
   background-size: cover;
   background-position: center;
   padding: calc(var(--space-2xl) + 1rem) var(--space-md) var(--space-xl);
@@ -1252,7 +1254,13 @@ p {
   }
 
   .nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     padding: 0.6rem var(--space-md);
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
   }
 
   .nav__links {
