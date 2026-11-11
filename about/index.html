@@ -18,7 +18,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/css/main.css?v=20261111_10">
+  <link rel="stylesheet" href="/css/main.css?v=20261111_11">
 </head>
 <body>
 
@@ -28,6 +28,12 @@
       <img src="/assets/logos/cq-monogram.svg" alt="CQ" width="40" height="32">
     </a>
     <div class="nav__links" id="nav-links">
+      <button class="nav__close" id="nav-close" aria-label="Close menu" type="button">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
       <a href="/" class="nav__link" id="nav-home"><span data-en="Home" data-sw="Nyumbani">Home</span></a>
       <a href="/research/" class="nav__link" id="nav-research"><span data-en="Research" data-sw="Utafiti">Research</span></a>
       <a href="/about/" class="nav__link nav__link--active" id="nav-about"><span data-en="About" data-sw="Kuhusu">About</span></a>
@@ -43,6 +49,7 @@
       <span class="nav__toggle-bar"></span>
     </button>
   </nav>
+  <div class="nav__backdrop" id="nav-backdrop" aria-hidden="true"></div>
 
   <!-- ====== PAGE HEADER ====== -->
   <header class="page-header">
@@ -60,7 +67,7 @@
       </p>
 
       <div style="margin: var(--space-lg) auto 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; max-width: 740px; box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
-        <img src="/assets/images/primary-encounter.jpg?v=20261111_10" alt="Mother and young child seated together in a clinic consultation room in Tanzania" style="width: 100%; height: auto; display: block;" loading="lazy">
+        <img src="/assets/images/primary-encounter.jpg?v=20261111_11" alt="Mother and young child seated together in a clinic consultation room in Tanzania" style="width: 100%; height: auto; display: block;" loading="lazy">
       </div>
 
       <p style="margin-top: var(--space-md);" data-en="ClerQ exists to close those gaps, starting from frontline reality in Tanzania to build technology that transforms clinical decision support across the continent." data-sw="ClerQ ipo kufunga mapengo hayo, kuanzia uhalisia wa mstari wa mbele nchini Tanzania kujenga teknolojia inayobadilisha msaada wa maamuzi ya kitabibu kote barani.">
@@ -111,7 +118,7 @@
         ClerQ is built by a small, focused team that combines clinical expertise, health policy knowledge, regulatory experience, and technical capability. We're based in Tanzania and we work on this full-time.
       </p>
       <div style="margin: var(--space-md) auto 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; max-width: 740px; box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
-        <img src="/assets/images/team-facility.jpg?v=20261111_10" alt="ClerQ Intelligence clinical research and development team in Dar es Salaam" style="width: 100%; height: auto; display: block;" loading="lazy">
+        <img src="/assets/images/team-facility.jpg?v=20261111_11" alt="ClerQ Intelligence clinical research and development team in Dar es Salaam" style="width: 100%; height: auto; display: block;" loading="lazy">
       </div>
 
       <div class="team-list">
@@ -173,6 +180,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js?v=20261111_10"></script>
+  <script src="/js/main.js?v=20261111_11"></script>
 </body>
 </html>

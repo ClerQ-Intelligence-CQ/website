@@ -22,7 +22,7 @@
       base = '/' + clean;
     }
     // Append asset cache buster so mobile browsers never display stale media
-    return base + (base.indexOf('?') === -1 ? '?v=20261111_10' : '&v=20261111_10');
+    return base + (base.indexOf('?') === -1 ? '?v=20261111_11' : '&v=20261111_11');
   }
 
   // ============================================================
@@ -496,10 +496,11 @@
     setLang(current === 'en' ? 'sw' : 'en');
   });
 
-  // Mobile navigation toggle
+  // Mobile navigation toggle & collapsible overlay
   var navToggle = document.getElementById('nav-toggle');
   var navLinks = document.getElementById('nav-links');
   var navBackdrop = document.getElementById('nav-backdrop');
+  var navClose = document.getElementById('nav-close');
   if (navToggle && navLinks) {
     function toggleMobileMenu(forceOpen) {
       var willOpen = typeof forceOpen === 'boolean' ? forceOpen : !navLinks.classList.contains('nav__links--open');
@@ -512,8 +513,24 @@
       document.body.style.overflow = willOpen ? 'hidden' : '';
     }
 
-    navToggle.addEventListener('click', function () {
+    navToggle.addEventListener('click', function (e) {
+      e.stopPropagation();
       toggleMobileMenu();
+    });
+
+    if (navClose) {
+      navClose.addEventListener('click', function (e) {
+        e.stopPropagation();
+        toggleMobileMenu(false);
+      });
+    }
+
+    // Event delegation on navLinks for close button or links
+    navLinks.addEventListener('click', function (e) {
+      if (e.target.closest('#nav-close') || e.target.closest('.nav__close')) {
+        e.stopPropagation();
+        toggleMobileMenu(false);
+      }
     });
 
     if (navBackdrop) {
@@ -522,10 +539,17 @@
       });
     }
 
-    navLinks.querySelectorAll('.nav__link, .nav__lang-toggle').forEach(function (link) {
+    navLinks.querySelectorAll('.nav__link').forEach(function (link) {
       link.addEventListener('click', function () {
         toggleMobileMenu(false);
       });
+    });
+
+    // Close on Escape key press
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navLinks.classList.contains('nav__links--open')) {
+        toggleMobileMenu(false);
+      }
     });
   }
 

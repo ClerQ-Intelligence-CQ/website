@@ -18,7 +18,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/css/main.css?v=20261111_10">
+  <link rel="stylesheet" href="/css/main.css?v=20261111_11">
 </head>
 <body>
 
@@ -28,6 +28,12 @@
       <img src="/assets/logos/cq-monogram.svg" alt="CQ" width="40" height="32">
     </a>
     <div class="nav__links" id="nav-links">
+      <button class="nav__close" id="nav-close" aria-label="Close menu" type="button">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
       <a href="/" class="nav__link" id="nav-home"><span data-en="Home" data-sw="Nyumbani">Home</span></a>
       <a href="/research/" class="nav__link" id="nav-research"><span data-en="Research" data-sw="Utafiti">Research</span></a>
       <a href="/about/" class="nav__link" id="nav-about"><span data-en="About" data-sw="Kuhusu">About</span></a>
@@ -43,6 +49,7 @@
       <span class="nav__toggle-bar"></span>
     </button>
   </nav>
+  <div class="nav__backdrop" id="nav-backdrop" aria-hidden="true"></div>
 
   <!-- ====== PAGE HEADER ====== -->
   <header class="page-header">
@@ -231,6 +238,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js?v=20261111_10"></script>
+  <script src="/js/main.js?v=20261111_11"></script>
 </body>
 </html>

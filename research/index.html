@@ -18,7 +18,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/css/main.css?v=20261111_10">
+  <link rel="stylesheet" href="/css/main.css?v=20261111_11">
 </head>
 <body>
 
@@ -28,6 +28,12 @@
       <img src="/assets/logos/cq-monogram.svg" alt="CQ" width="40" height="32">
     </a>
     <div class="nav__links" id="nav-links">
+      <button class="nav__close" id="nav-close" aria-label="Close menu" type="button">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
       <a href="/" class="nav__link" id="nav-home"><span data-en="Home" data-sw="Nyumbani">Home</span></a>
       <a href="/research/" class="nav__link nav__link--active" id="nav-research"><span data-en="Research" data-sw="Utafiti">Research</span></a>
       <a href="/about/" class="nav__link" id="nav-about"><span data-en="About" data-sw="Kuhusu">About</span></a>
@@ -43,6 +49,7 @@
       <span class="nav__toggle-bar"></span>
     </button>
   </nav>
+  <div class="nav__backdrop" id="nav-backdrop" aria-hidden="true"></div>
 
   <!-- ====== PAGE HEADER ====== -->
   <header class="page-header">
@@ -119,7 +126,7 @@
       </p>
 
       <div style="margin: var(--space-lg) auto 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; max-width: 720px; box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
-        <img src="/assets/images/sema-manuscript.jpg?v=20261111_10" alt="Sema morphological linguistic notes and STG clinical guidelines" style="width: 100%; height: auto; display: block;" loading="lazy">
+        <img src="/assets/images/sema-manuscript.jpg?v=20261111_11" alt="Sema morphological linguistic notes and STG clinical guidelines" style="width: 100%; height: auto; display: block;" loading="lazy">
       </div>
 
       <div class="research-links" style="margin-top: var(--space-md);">
@@ -144,8 +151,8 @@
             </a>
           </div>
         </details>
-        <a href="mailto:research@clerqintelligence.com" class="ext-link">
-          <span data-en="Questions about Sema? research@clerqintelligence.com" data-sw="Maswali kuhusu Sema? research@clerqintelligence.com">Questions about Sema? research@clerqintelligence.com</span>
+        <a href="mailto:research@clerqintelligence.site" class="ext-link">
+          <span data-en="Questions about Sema? research@clerqintelligence.site" data-sw="Maswali kuhusu Sema? research@clerqintelligence.site">Questions about Sema? research@clerqintelligence.site</span>
         </a>
       </div>
     </div>
@@ -181,7 +188,7 @@
       </p>
 
       <div style="margin: var(--space-lg) auto 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; max-width: 720px; box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
-        <img src="/assets/images/rafiki-mesh.jpg?v=20261111_10" alt="Rafiki edge digital twin field validation with Tanzanian clinicians" style="width: 100%; height: auto; display: block;" loading="lazy">
+        <img src="/assets/images/rafiki-mesh.jpg?v=20261111_11" alt="Rafiki edge digital twin field validation with Tanzanian clinicians" style="width: 100%; height: auto; display: block;" loading="lazy">
       </div>
 
       <div class="research-links" style="margin-top: var(--space-md);">
@@ -189,8 +196,8 @@
           <span data-en="Repository on GitHub" data-sw="Hazina kwenye GitHub">Repository on GitHub</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
         </a>
-        <a href="mailto:research@clerqintelligence.com" class="ext-link">
-          <span data-en="Research inquiries: research@clerqintelligence.com" data-sw="Maswali ya utafiti: research@clerqintelligence.com">Research inquiries: research@clerqintelligence.com</span>
+        <a href="mailto:research@clerqintelligence.site" class="ext-link">
+          <span data-en="Research inquiries: research@clerqintelligence.site" data-sw="Maswali ya utafiti: research@clerqintelligence.site">Research inquiries: research@clerqintelligence.site</span>
         </a>
       </div>
     </div>
@@ -230,8 +237,8 @@
       </p>
 
       <div class="research-links" style="margin-top: var(--space-md);">
-        <a href="mailto:research@clerqintelligence.com?subject=Hakiki%20Validation%20%26%20MCP%20Inquiry" class="ext-link">
-          <span data-en="Request Hakiki Audit Console access: research@clerqintelligence.com" data-sw="Omba ufikiaji wa Dashibodi ya Hakiki: research@clerqintelligence.com">Request Hakiki Audit Console access: research@clerqintelligence.com</span>
+        <a href="mailto:research@clerqintelligence.site?subject=Hakiki%20Validation%20%26%20MCP%20Inquiry" class="ext-link">
+          <span data-en="Request Hakiki Audit Console access: research@clerqintelligence.site" data-sw="Omba ufikiaji wa Dashibodi ya Hakiki: research@clerqintelligence.site">Request Hakiki Audit Console access: research@clerqintelligence.site</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
         </a>
       </div>
@@ -270,6 +277,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js?v=20261111_10"></script>
+  <script src="/js/main.js?v=20261111_11"></script>
 </body>
 </html>
