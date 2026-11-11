@@ -35,7 +35,7 @@
       subEn: 'Emergency triage assessment, ABCDE vital resuscitation protocols, and bilingual Swahili/English consultation lookup.',
       subSw: 'Tathmini ya dharura (Category RED), itifaki ya ABCDE ya uokoaji, na mashauriano ya Kiswahili na Kiingereza.',
       img: 'assets/screens/new_lucy.png',
-      video: 'assets/screens/chat_REAL_loading_short.mp4',
+      video: 'assets/screens/chat_FINAL_cut_f80_f259_out.mp4',
       featuresEn: [
         'Instant STG 2026 Level-0 Router for Category RED (Immediate Threat) airway, breathing, and circulation (ABCDE) stabilization.',
         'Direct bedside dosing directives: High-Flow Oxygen (10–15 L/min via non-rebreather mask, target SpO2 >= 94%) and IV Crystalloids (Ringer\'s Lactate / 0.9% NaCl).',
