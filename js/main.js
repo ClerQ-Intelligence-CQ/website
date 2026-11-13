@@ -273,13 +273,18 @@
 
     // 1. Update Tabs
     var tabBtns = document.querySelectorAll('.suite-tab-btn');
+    var navScroll = document.querySelector('.suite-nav-scroll');
     tabBtns.forEach(function (btn, i) {
       var isActive = i === index;
       btn.classList.toggle('is-active', isActive);
       btn.setAttribute('aria-selected', String(isActive));
-      if (isActive && typeof btn.scrollIntoView === 'function') {
+      if (isActive && animated && navScroll) {
         try {
-          btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          var targetLeft = btn.offsetLeft - (navScroll.clientWidth - btn.offsetWidth) / 2;
+          navScroll.scrollTo({
+            left: Math.max(0, targetLeft),
+            behavior: 'smooth'
+          });
         } catch (e) {}
       }
     });
@@ -559,11 +564,115 @@
     }, { passive: true });
   }
 
+  // ============================================================
+  // Direct Smooth-Scroll Triggers (Account for Sticky Nav)
+  // ============================================================
+  function getNavOffset() {
+    var navEl = document.getElementById('main-nav');
+    return navEl ? navEl.getBoundingClientRect().height : 64;
+  }
+
+  function scrollToAnchorTarget(hash) {
+    if (!hash || hash === '#') return false;
+    var targetId = hash.charAt(0) === '#' ? hash.slice(1) : hash;
+    var target = null;
+
+    if (targetId === 'keynote-film' || targetId === 'keynote-video-card') {
+      target = document.getElementById('keynote-video-card') ||
+        document.querySelector('#keynote-film .video-card') ||
+        document.getElementById(targetId);
+    } else {
+      target = document.getElementById(targetId);
+    }
+
+    if (!target) return false;
+
+    var navH = getNavOffset();
+    var rect = target.getBoundingClientRect();
+    var docTop = rect.top + window.pageYOffset;
+    var viewportAvail = window.innerHeight - navH;
+
+    // For keynote video card: frame the video card directly in the visible viewport
+    var targetY;
+    if (targetId === 'keynote-film' || targetId === 'keynote-video-card') {
+      if (rect.height > 0 && rect.height + 24 < viewportAvail) {
+        targetY = docTop - navH - Math.max(14, (viewportAvail - rect.height) / 2);
+      } else {
+        targetY = docTop - navH - 12;
+      }
+    } else {
+      targetY = docTop - navH - 12;
+    }
+
+    window.scrollTo({
+      top: Math.max(0, Math.round(targetY)),
+      behavior: 'smooth'
+    });
+
+    if (targetId === 'keynote-film' || targetId === 'keynote-video-card') {
+      target.classList.remove('video-card--focus');
+      void target.offsetWidth;
+      target.classList.add('video-card--focus');
+      setTimeout(function () {
+        target.classList.remove('video-card--focus');
+      }, 1800);
+
+      var vid = target.querySelector('video');
+      if (vid && typeof vid.play === 'function') {
+        try {
+          var playPromise = vid.play();
+          if (playPromise && typeof playPromise.catch === 'function') {
+            playPromise.catch(function () {});
+          }
+        } catch (err) {}
+      }
+    }
+
+    return true;
+  }
+
+  function initScrollTriggers() {
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('a[href^="#"]');
+      if (!link) return;
+      var href = link.getAttribute('href');
+      if (!href || href === '#') return;
+
+      if (scrollToAnchorTarget(href)) {
+        e.preventDefault();
+        if (history && typeof history.replaceState === 'function') {
+          try {
+            history.replaceState(null, '', href);
+          } catch (err) {}
+        }
+      }
+    });
+  }
+
   // Initialize on DOM ready
   function boot() {
     initSuiteShowcase();
     var initialLang = getLang();
     setLang(initialLang);
+    initScrollTriggers();
+
+    if (window.location.hash && window.location.hash.length > 1) {
+      setTimeout(function () {
+        scrollToAnchorTarget(window.location.hash);
+      }, 60);
+    } else {
+      if ('scrollRestoration' in history) {
+        try {
+          history.scrollRestoration = 'manual';
+        } catch (e) {}
+      }
+      window.scrollTo(0, 0);
+      requestAnimationFrame(function () {
+        if (!window.location.hash) {
+          window.scrollTo(0, 0);
+        }
+      });
+    }
   }
 
   if (document.readyState === 'loading') {
