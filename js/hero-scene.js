@@ -44,26 +44,26 @@
   resize();
   window.addEventListener('resize', resize);
 
-  // Materials: luminous brand-aligned wireframes over dark clinical image
+  // Materials: clean monochrome wireframes on light hero gradient
   var wireMaterial = new THREE.MeshBasicMaterial({
-    color: 0xB79BEF,
+    color: 0x0A0A0A,
     wireframe: true,
     transparent: true,
-    opacity: 0.35
+    opacity: 0.08
   });
 
   var wireMaterialCyan = new THREE.MeshBasicMaterial({
-    color: 0x38BDF8,
+    color: 0x52525B,
     wireframe: true,
     transparent: true,
-    opacity: 0.28
+    opacity: 0.06
   });
 
   var wireMaterialLight = new THREE.MeshBasicMaterial({
-    color: 0xE0D4FC,
+    color: 0x0A0A0A,
     wireframe: true,
     transparent: true,
-    opacity: 0.22
+    opacity: 0.045
   });
 
   var heroGroup = new THREE.Group();
@@ -95,10 +95,10 @@
   var torus1 = new THREE.Mesh(
     new THREE.TorusKnotGeometry(0.8, 0.06, 80, 12, 2, 3),
     new THREE.MeshBasicMaterial({
-      color: 0xA78BFA,
+      color: 0x0A0A0A,
       wireframe: true,
       transparent: true,
-      opacity: 0.25
+      opacity: 0.04
     })
   );
   torus1.position.set(-0.8, -0.4, 0.5);
@@ -107,10 +107,10 @@
   var ring3 = new THREE.Mesh(
     new THREE.TorusGeometry(2.8, 0.01, 8, 120),
     new THREE.MeshBasicMaterial({
-      color: 0x38BDF8,
+      color: 0x0A0A0A,
       wireframe: true,
       transparent: true,
-      opacity: 0.18
+      opacity: 0.03
     })
   );
   ring3.rotation.x = Math.PI * 0.5;

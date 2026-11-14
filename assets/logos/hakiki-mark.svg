@@ -15,5 +15,5 @@
   <circle cx="270" cy="46" r="16" class="lens"/>
   <line x1="282" y1="58" x2="298" y2="74" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round"/>
   <!-- Focus spark in lens -->
-  <circle cx="266" cy="42" r="3" fill="#00D09C"/>
+  <circle cx="266" cy="42" r="3" fill="#0A0A0A"/>
 </svg>
