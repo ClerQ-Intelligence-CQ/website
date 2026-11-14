@@ -1448,7 +1448,9 @@ p {
   }
 
   .hero__eyebrow {
-    display: none; /* Already announced by TDHW top bar, avoids concussive repetition on mobile */
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
   }
 
   .hero__logotype {

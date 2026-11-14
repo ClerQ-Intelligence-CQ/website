@@ -649,58 +649,8 @@
     });
   }
 
-  // ============================================================
-  // TDHW Live Closing Countdown Timer (18:00 EAT / GMT+3)
-  // ============================================================
-  function initTdhwCountdown() {
-    var timerEl = document.getElementById('tdhw-countdown-timer');
-    var badgeEl = document.getElementById('tdhw-countdown-badge');
-    if (!timerEl) return;
-
-    var EAT_OFFSET_MS = 3 * 60 * 60 * 1000; // East Africa Time = UTC+3 (GMT+3)
-
-    function pad2(n) {
-      return n < 10 ? '0' + n : String(n);
-    }
-
-    function updateCountdown() {
-      var nowUtcMs = Date.now();
-      var eatNow = new Date(nowUtcMs + EAT_OFFSET_MS);
-
-      // Compute 18:00:00 EAT on current EAT date
-      var targetEatMs = Date.UTC(
-        eatNow.getUTCFullYear(),
-        eatNow.getUTCMonth(),
-        eatNow.getUTCDate(),
-        18, 0, 0, 0
-      );
-
-      // If 18:00 EAT has already passed today, roll target to next 18:00 EAT so countdown keeps ticking live
-      var diffMs = targetEatMs - (nowUtcMs + EAT_OFFSET_MS);
-      if (diffMs <= 0) {
-        targetEatMs += 24 * 60 * 60 * 1000;
-        diffMs = targetEatMs - (nowUtcMs + EAT_OFFSET_MS);
-      }
-
-      var totalSeconds = Math.max(0, Math.floor(diffMs / 1000));
-      var hours = Math.floor(totalSeconds / 3600);
-      var minutes = Math.floor((totalSeconds % 3600) / 60);
-      var seconds = totalSeconds % 60;
-
-      timerEl.textContent = pad2(hours) + 'h : ' + pad2(minutes) + 'm : ' + pad2(seconds) + 's';
-
-      if (badgeEl) {
-        badgeEl.classList.toggle('is-ticking', seconds % 2 === 0);
-      }
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  }
-
   // Initialize on DOM ready
   function boot() {
-    initTdhwCountdown();
     initSuiteShowcase();
     var initialLang = getLang();
     setLang(initialLang);
